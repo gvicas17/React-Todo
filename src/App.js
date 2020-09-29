@@ -4,19 +4,13 @@ import TodoForm from './components/TodoForm'
 
 const todo = [
   {
-    task: 'Feed Pets',
+    task: "Feed Pets",
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Clean Floors',
+    task: "Clean Floors",
     id: 1528817084358,
-    completed: false
-  },
-
-  {
-    task: 'Wash Dishes',
-    id: 1234,
     completed: false
   }
 ];
@@ -32,8 +26,8 @@ class App extends React.Component {
     };
   }
 
-  addTask = (e, task) => {
-    e.preventDefault();
+  addTask = (event, task) => {
+    event.preventDefault();
     const newTask = {
       task: task,
       id: Date.now(),
@@ -76,7 +70,7 @@ class App extends React.Component {
       </div>
         <TodoList
           todo = {this.state.todo}
-          toggleTask = {this.toggleItem}
+          toggleTask = {this.toggleTask}
           clearCompletedTask = {this.clearCompletedTask}
         />
       </div>
